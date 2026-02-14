@@ -1,8 +1,15 @@
 import React from "react";
 
-type Color = "white" | "black" | "green"; //unions
+type Color = "white" | "black" | "green"; //unions nad u cant use unions in interface
 
-interface ButtonProps {
+type URL=string;
+
+
+const url:URL="https://www.google.com";
+
+//always use type alias instead of interface
+
+interface ButtonProps { //interface can be used to describe objects
   backgroundColor?: string;
   textColor: Color;
   children: React.ReactNode; //it allows everything inside it
@@ -10,6 +17,7 @@ interface ButtonProps {
   padding?: number[]; //array of numbers
   margin?: [number, number]; //tuple
   borderRadius: Record<string, number>;
+  setCount?: React.Dispatch<React.SetStateAction<number>>;
 }
 
 const Button = ({
@@ -18,6 +26,7 @@ const Button = ({
   textColor,
   padding,
   margin,
+  setCount,
   borderRadius,
 }: ButtonProps) => {
   return (

@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "../components/Button";
 
 const Home = () => {
+  const [count, setCount] = useState(0);
   return (
     <div>
-      <Button>Click Here</Button>
+      <Button setCount={setCount}>Click Here</Button>
     </div>
   );
 };

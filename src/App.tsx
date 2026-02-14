@@ -1,13 +1,15 @@
 import Button from "./components/Button";
 import { Button2 } from "./components/Button2";
+import Button3 from "./components/Button3";
+import GenericExample from "./components/GenericExample";
 import { Input } from "./components/Input";
 
 function App() {
   let url = "https://www.google.com";
 
-  const onClick = (test:string) => {
+  const onClick = (test: string) => {
     return 5;
-  }
+  };
   return (
     <div>
       <h1 className=" text-5xl text-red-500 text-center ">Hello Shirish</h1>
@@ -30,7 +32,13 @@ function App() {
       <Input
         style={{ backgroundColor: "red", margin: "10px", padding: "10px" }}
       />
-      <Button2 style={{ color: "red", margin: "10px", padding: "10px" }} onClick={onClick} />
+      <Button2
+        style={{ color: "red", margin: "10px", padding: "10px" }}
+        onClick={onClick}
+      />
+      <Button3 />
+      <GenericExample countValue={5} countHistory={[1, 2, 3]} />
+      {/* if i pass a string, the other will show error in above generic */}
     </div>
   );
 }
