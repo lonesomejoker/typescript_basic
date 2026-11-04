@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Button from "./components/Button";
 import { Button2 } from "./components/Button2";
 import Button3 from "./components/Button3";
@@ -14,6 +15,16 @@ function App() {
     <div>
       <h1 className=" text-5xl text-red-500 text-center ">Hello Shirish</h1>
       <button className=" px-4 py-2 rounded-xl bg-blue-500">Search</button>
+      <div className="my-4">
+        <Link
+          to="/drinks"
+          className="px-4 py-2 rounded-xl bg-green-600 text-white font-semibold hover:bg-green-700 inline-block"
+        >
+          Go to Drinks Page →
+        </Link>
+      </div>
+
+      
       <Button
         textColor="white"
         padding={[10, 5, 5, 10]}
