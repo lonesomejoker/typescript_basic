@@ -20,8 +20,8 @@ const Button4 = () => {
     console.log(event);
   };
 
-  const data = user?.name; //chaining compulsory
-  return <button onClick={handleClick}>Click</button>;
+  const data = user?.name; //chaining compulsory cause user can be null
+  return <button ref={ref} onClick={handleClick}>Click</button>;
 };
 
 export default Button4;

@@ -1,12 +1,14 @@
 import React from "react";
 import type { Colors } from "../lib/types";
 
-type ClickHandler = (text: string) => number | undefined;
+type ClickHandler = (test: string) => number | undefined;
 
 type ButtonProps = {
-  style: React.CSSProperties;
+  style: React.CSSProperties; //inbuilt type for css properties
   onClick?: ClickHandler;
   color?:Colors
+  onMouseOver?: React.MouseEventHandler<HTMLButtonElement>;
+  handleLogin?: (username: string, password: string) => void;
 };
 
 //adding base properties + new ones
@@ -22,7 +24,7 @@ interface newButtonProps extends ButtonProps {
 
 export const Button2 = ({ style, onClick }: ButtonProps) => {
   return (
-    <button style={style} onClick={onClick}>
+    <button style={style} onClick={() => onClick?.("Button2")}>
       Button2
     </button>
   );

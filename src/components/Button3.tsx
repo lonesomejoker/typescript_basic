@@ -10,7 +10,12 @@ type anchorProps = ComponentProps<'a'>;
 type inputProps = ComponentProps<'input'>; //etc///
 
 type ButtonPropsRef=ComponentPropsWithRef<'button'> // when u wan to pass the ref
+
 // type InputPropsRef=ComponentPropsWithoutRef<'input'>
+
+interface ButtonPropsRef2 extends ButtonProps{
+  autoFocus?:boolean
+}
 
 const Button3 = ({type,autoFocus,variants,...props}:ButtonProps) => {
   return (

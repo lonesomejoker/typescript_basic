@@ -16,7 +16,7 @@ interface ButtonProps { //interface can be used to describe objects
   //children:JSX.Element; // it is more strict than reactNode which allows passin only elements like icons div, but no text
   padding?: number[]; //array of numbers
   margin?: [number, number]; //tuple
-  borderRadius: Record<string, number>;
+  borderRadius: Record<string, number>; // Record is used for key value pair, where key is string and value is number
   setCount?: React.Dispatch<React.SetStateAction<number>>;
 }
 
@@ -30,7 +30,7 @@ const Button = ({
   borderRadius,
 }: ButtonProps) => {
   return (
-    <button
+    <button 
       className={`${backgroundColor} ${textColor} ${padding} ${margin} ${borderRadius} px-4 py-2.5 rounded-xl`}
     >
       {children}
