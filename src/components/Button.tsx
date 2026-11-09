@@ -11,12 +11,12 @@ const url:URL="https://www.google.com";
 
 interface ButtonProps { //interface can be used to describe objects
   backgroundColor?: string;
-  textColor: Color;
+  textColor?: Color;
   children: React.ReactNode; //it allows everything inside it
   //children:JSX.Element; // it is more strict than reactNode which allows passin only elements like icons div, but no text
   padding?: number[]; //array of numbers
   margin?: [number, number]; //tuple
-  borderRadius: Record<string, number>;
+  borderRadius?: Record<string, number>;
   setCount?: React.Dispatch<React.SetStateAction<number>>;
 }
 
